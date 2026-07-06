@@ -6,7 +6,7 @@ pool:
 
 steps:
 
-<<<<<<< HEAD
+
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: '1.13.0'
