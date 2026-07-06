@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "varun-rg-9997"
+  default = "varun-rg-97"
 }
 
 variable "location" {
