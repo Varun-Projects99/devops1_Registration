@@ -2,10 +2,11 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
 
+<<<<<<< HEAD
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: '1.13.0'
@@ -53,3 +54,4 @@ steps:
     workingDirectory: terraform-azure
     inlineScript: |
       terraform apply -auto-approve
+

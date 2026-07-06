@@ -1,9 +1,9 @@
 variable "resource_group_name" {
-  default = "DevOps___RG"
+  default = "varun-rg-9997"
 }
 
 variable "location" {
-  default = "East US"
+  default = "Central India"
 }
 
 variable "storage_account_name" {
