@@ -8,17 +8,48 @@ steps:
 
 - task: TerraformInstaller@1
   inputs:
-    terraformVersion: '1.5.7'
+    terraformVersion: '1.13.0'
 
+# Terraform Init
 - task: AzureCLI@2
-  displayName: 'Terraform Deploy'
+  displayName: 'Terraform Init'
   inputs:
-    azureSubscription: 'varun1'   # Your Service Connection name
+    azureSubscription: 'varun1'
     scriptType: bash
     scriptLocation: inlineScript
     workingDirectory: terraform-azure
     inlineScript: |
       terraform init
+
+# Terraform Validate
+- task: AzureCLI@2
+  displayName: 'Terraform Validate'
+  inputs:
+    azureSubscription: 'varun1'
+    scriptType: bash
+    scriptLocation: inlineScript
+    workingDirectory: terraform-azure
+    inlineScript: |
       terraform validate
+
+# Terraform Plan
+- task: AzureCLI@2
+  displayName: 'Terraform Plan'
+  inputs:
+    azureSubscription: 'varun1'
+    scriptType: bash
+    scriptLocation: inlineScript
+    workingDirectory: terraform-azure
+    inlineScript: |
       terraform plan
+
+# Terraform Apply
+- task: AzureCLI@2
+  displayName: 'Terraform Apply'
+  inputs:
+    azureSubscription: 'varun1'
+    scriptType: bash
+    scriptLocation: inlineScript
+    workingDirectory: terraform-azure
+    inlineScript: |
       terraform apply -auto-approve
