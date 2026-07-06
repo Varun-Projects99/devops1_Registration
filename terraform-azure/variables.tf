@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "DevOpsRG"
+  default = "DevOps___RG"
 }
 
 variable "location" {
